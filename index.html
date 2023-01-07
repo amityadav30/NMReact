@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const heading1 = React.createElement("h1", { key: 1 }, "Heading1");
+      const heading2 = React.createElement("h2", { key: 2 }, "Heading2");
+      const container = React.createElement("div", { key: 3 }, [
+        heading1,
+        heading2,
+      ]);
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(container);
+    </script>
+  </body>
+</html>
+
+<!-- What’s the difference between React and ReactDOM?
+React is a JavaScript library for building User Interfaces and ReactDOM is the JavaScript library that allows React to interact with the DOM. -->
+
+<!-- As the name implies, ReactDOM is the glue between React and the DOM. For everything else, there’s React. 
+    You use React to define and create your elements, for lifecycle hooks, etc.
+    i.e. the guts of a React application.
+
+So, in brief:
+
+React: a javascript library, designed for building user interfaces
+React-DOM: a complimentary library to React which glues React to the browser DOM -->
